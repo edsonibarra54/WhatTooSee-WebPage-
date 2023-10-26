@@ -1,0 +1,23 @@
+body{
+    margin: 0px;
+    font-family: Raleway;
+}
+
+::-webkit-scrollbar {
+    width: 8px; /* Cambia el ancho de la barra de desplazamiento en navegadores webkit (como Chrome y Safari) */
+    scrollbar-color: transparent transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaaaaa; /* Cambia el color del pulgar de la barra de desplazamiento en navegadores webkit */
+    border-radius: 6px; /* Cambia el radio de las esquinas del pulgar en navegadores webkit */
+}
+
+
+.banner{
+    width: 100%;
+    height: 100%;
+    background-image: url("img/OppenheimerBanner.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
