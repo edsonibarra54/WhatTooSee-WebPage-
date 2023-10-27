@@ -1,6 +1,7 @@
 <html>
     <head>
         <script type="text/javascript" src="js/functionality.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="styleDesktop.css" media="screen and (min-width: 1024px)">
         <link rel="stylesheet" type="text/css" href="styleTablet.css" media="screen and (max-width: 1023px) and (min-width: 768px)">
@@ -10,16 +11,32 @@
     <body>
         <div id="Container">
             <div id="Menu">
-                <div id="Logo"></div>
-                <ul class="List">
-                    <li><a href="#" class="Link">Peliculas</a></li>
-                    <li><a href="#" class="Link">Series</a></li>
-                    <li><a href="#" class="Link">Comunidad</a></li>
-                    <li><a href="#" class="Link">Iniciar Sesion</a></li>
-                </ul>
+                <div id="Menu-top">
+                    <div id="Logo"></div>
+                    <div id="mainListDiv" class="main_list">
+                        <ul class="List" id="ListMenu">
+                            <li><a href="#" class="Link">Peliculas</a></li>
+                            <li><a href="#" class="Link">Series</a></li>
+                            <li><a href="#" class="Link">Comunidad</a></li>
+                            <li><a href="#" class="Link">Iniciar Sesion</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-toggle">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <div id="secondListDiv" class="second_list">
+                    <ul class="List" id="ListMenu2">
+                        <li><a href="#" class="Link">Peliculas</a></li>
+                        <li><a href="#" class="Link">Series</a></li>
+                        <li><a href="#" class="Link">Comunidad</a></li>
+                        <li><a href="#" class="Link">Iniciar Sesion</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- <div class="Banner"></div> -->
-            <!-- <div class="Banner"></div> -->
+            <div id="Banner"></div>
         </div>
     </body>
 </html>

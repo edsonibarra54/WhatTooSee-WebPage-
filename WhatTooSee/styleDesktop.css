@@ -10,6 +10,11 @@ body{
 
 #Menu{
     width: 100%;
+    position: fixed;
+}
+
+#Menu-top{
+    width: 100%;
     height: 75px;
     background-color: #e2e2e2;
     display: flex;
@@ -18,7 +23,7 @@ body{
 }
 
 #Logo{
-    width: 500px;
+    width: 250px;
     height: 65%;
     background-image: url("img/W2SBlack.png");
     background-size: contain;
@@ -69,4 +74,18 @@ body{
   .active::before,
   .active::after{
       transform: scaleX(1);
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.second_list{
+    display: none;
+}
+
+#Banner{
+    width: 100%;
+    height: 1000px;
+    background-color: #e2e2e2;
 }
