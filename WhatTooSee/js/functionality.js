@@ -45,4 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     observer.observe(dynamicDiv);
+
+    // Inicia el carrusel de top peliculas
+    var splide2 = new Splide('#movieSlider', {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        snap: true,
+        autoplay: true,
+    });
+
+    splide2.mount();
 });
