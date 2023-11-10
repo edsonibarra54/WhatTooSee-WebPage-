@@ -121,13 +121,13 @@ body{
 .posterCarouselBase{
     width: 100%;
     height: 550px;
+    margin-top: 20px;
     background-color: #1C1C1C;
 }
 
 .posterCarousel{
     width: 100%;
-    height: 550px;
-    margin-top: 20px;
+    height: 100%;
 }
 
 .posterContainer{

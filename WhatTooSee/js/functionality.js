@@ -32,19 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
         list.style.flexDirection = 'column';
     });
 
-    const dynamicDiv = document.getElementById('Banner');
+    // Escucha cambios en la altura del banner
+    const banner = document.getElementById('Banner');
 
-    // Escucha cambios en la altura del div
-    const observer = new ResizeObserver(entries => {
+    const observerBanner = new ResizeObserver(entries => {
         for (const entry of entries) {
         const width = entry.contentRect.width;
-        // Ajusta la anchura basada en la altura, por ejemplo, para una relación de aspecto 4:3
         const height = width / 2;
-        dynamicDiv.style.height = height + 'px';
+        banner.style.height = height + 'px';
         }
     });
 
-    observer.observe(dynamicDiv);
+    observerBanner.observe(banner);
 
     // Inicia el carrusel de top peliculas
     var splide2 = new Splide('#movieSlider', {
@@ -56,4 +55,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     splide2.mount();
+
+    // Escucha cambios en la altura del carrusel de posters
+    const posterCarouselBase = document.getElementsByClassName('posterCarouselBase')[0]
+
+    const observerPosterCarouselBase = new ResizeObserver(entries => {
+        for (const entry of entries) {
+        const width = entry.contentRect.width;
+        const height = width / 1.8618;
+        posterCarouselBase.style.height = height + 'px'; 
+        }
+    });
+
+    observerPosterCarouselBase.observe(posterCarouselBase);
 });
