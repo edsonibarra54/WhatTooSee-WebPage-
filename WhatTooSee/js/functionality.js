@@ -56,16 +56,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
     splide2.mount();
 
+    // Inicia el carrusel de top series
+    var splide3 = new Splide('#serieSlider', {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        snap: true,
+        autoplay: true,
+    });
+
+    splide3.mount();
+
+    // Inicia el carrusel de peliculas estreno
+    var splide4 = new Splide('#movieRelease', {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        snap: true,
+        autoplay: true,
+    });
+
+    splide4.mount();
+
+    // Inicia el carrusel de series estreno
+    var splide5 = new Splide('#serieRelease', {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        snap: true,
+        autoplay: true,
+    });
+
+    splide5.mount();
+
     // Escucha cambios en la altura del carrusel de posters
-    const posterCarouselBase = document.getElementsByClassName('posterCarouselBase')[0]
+    const elementosPosterCarouselBase = document.getElementsByClassName('posterCarouselBase');
 
     const observerPosterCarouselBase = new ResizeObserver(entries => {
         for (const entry of entries) {
-        const width = entry.contentRect.width;
-        const height = width / 1.8618;
-        posterCarouselBase.style.height = height + 'px'; 
+            const width = entry.contentRect.width;
+            const height = width / 1.8618;
+            
+            // Itera sobre todos los elementos y ajusta la altura
+            for (const elemento of elementosPosterCarouselBase) {
+                elemento.style.height = height + 'px';
+            }
         }
     });
 
-    observerPosterCarouselBase.observe(posterCarouselBase);
+    // Observa todos los elementos de la clase 'posterCarouselBase'
+    for (const elemento of elementosPosterCarouselBase) {
+        observerPosterCarouselBase.observe(elemento);
+    }
 });

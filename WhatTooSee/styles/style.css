@@ -39,3 +39,27 @@ body{
 #movieSlider .splide__pagination{
     display: none;
 }
+
+#serieSlider .splide__pagination{
+    display: none;
+}
+
+#movieRelease .splide__pagination{
+    display: none;
+}
+
+#serieRelease .splide__pagination{
+    display: none;
+}
+
+#logo{
+    cursor: pointer;
+}
+
+#bannerSlider .splide__slide{
+    cursor: pointer;
+}
+
+.poster{
+    cursor: pointer;
+}
