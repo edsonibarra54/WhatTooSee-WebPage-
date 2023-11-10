@@ -3,6 +3,7 @@ body{
     font-family: Raleway;
     display: flex;
     justify-content: center;
+    background-color: #e2e2e2;
 }
 
 ::-webkit-scrollbar {
@@ -33,4 +34,8 @@ body{
     height: 5px;
     transition: width 400ms ease;
     width: 0;
-} 
+}
+
+#movieSlider .splide__pagination{
+    display: none;
+}
