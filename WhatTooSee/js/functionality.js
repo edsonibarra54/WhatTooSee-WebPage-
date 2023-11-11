@@ -138,9 +138,14 @@ document.addEventListener('DOMContentLoaded', function() {
     for (const elemento of elementosPosterCarouselBase) {
         observerPosterCarouselBase.observe(elemento);
     }
-
-    // Direccionar a pagina peliculas/series
-    function redireccionar() {
-        window.location.href = './movies_and_series.html';
-    }
 });
+
+// Direccionar a pagina peliculas/series
+function redireccionar(index) {
+    if(index == 1){
+        window.location.href = '../pages/movies_and_series.html';
+    }
+    if(index == 3){
+        window.location.href = '../pages/login.html';
+    }
+}

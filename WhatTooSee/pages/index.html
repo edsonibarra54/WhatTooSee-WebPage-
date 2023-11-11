@@ -1,18 +1,18 @@
 <html>
     <head>
-        <script type="text/javascript" src="js/functionality.js"></script>
+        <script type="text/javascript" src="../js/functionality.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="styles/indexStyles/style.css">
-        <link rel="stylesheet" type="text/css" href="styles/indexStyles/styleDesktop.css" media="screen and (min-width: 1024px)">
-        <link rel="stylesheet" type="text/css" href="styles/indexStyles/styleTablet.css" media="screen and (max-width: 1023px) and (min-width: 768px)">
-        <link rel="stylesheet" type="text/css" href="styles/indexStyles/styleMobile.css" media="screen and (max-width: 767px)">
-        <link rel="stylesheet" href="splide-4.1.3/dist/css/splide.min.css">
+        <link rel="stylesheet" type="text/css" href="../styles/indexStyles/style.css">
+        <link rel="stylesheet" type="text/css" href="../styles/indexStyles/styleDesktop.css" media="screen and (min-width: 1024px)">
+        <link rel="stylesheet" type="text/css" href="../styles/indexStyles/styleTablet.css" media="screen and (max-width: 1023px) and (min-width: 768px)">
+        <link rel="stylesheet" type="text/css" href="../styles/indexStyles/styleMobile.css" media="screen and (max-width: 767px)">
+        <link rel="stylesheet" href="../splide-4.1.3/dist/css/splide.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
         <title>What to see</title>
-        <link rel="icon" href="img/favicon.png" type="image/png">
+        <link rel="icon" href="../img/favicon.png" type="image/png">
     </head>
     <body>
         <div id="Container">
@@ -21,9 +21,9 @@
                     <div id="Logo"></div>
                     <div id="mainListDiv" class="main_list">
                         <ul class="List" id="ListMenu">
-                            <li><a href="#" class="Link" onclick="redireccionar()">Peliculas/Series</a></li>
-                            <li><a href="#" class="Link">Comunidad</a></li>
-                            <li><a href="#" class="Link">Iniciar Sesion</a></li>
+                            <li><a href="#" class="Link" onclick="redireccionar(1)">Peliculas/Series</a></li>
+                            <li><a href="#" class="Link" onclick="redireccionar(2)">Comunidad</a></li>
+                            <li><a href="#" class="Link" onclick="redireccionar(3)">Iniciar Sesion</a></li>
                         </ul>
                     </div>
                     <div class="menu-toggle">
@@ -34,9 +34,9 @@
                 </div>
                 <div id="secondListDiv" class="second_list">
                     <ul class="List" id="ListMenu2">
-                        <li><a href="#" class="Link" onclick="redireccionar()">Peliculas/Series</a></li>
-                        <li><a href="#" class="Link">Comunidad</a></li>
-                        <li><a href="#" class="Link">Iniciar Sesion</a></li>
+                        <li><a href="#" class="Link" onclick="redireccionar(1)">Peliculas/Series</a></li>
+                        <li><a href="#" class="Link" onclick="redireccionar(2)">Comunidad</a></li>
+                        <li><a href="#" class="Link" onclick="redireccionar(3)">Iniciar Sesion</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,16 +45,16 @@
                     <div class="splide" id="bannerSlider">
                         <div class="splide__track">
                             <ul class="splide__list">
-                                <li class="splide__slide"><img class="bannerImage" src="img/Image-1.jpeg"></li>
-                                <li class="splide__slide"><img class="bannerImage" src="img/Image-2.jpg"></li>
-                                <li class="splide__slide"><img class="bannerImage" src="img/Image-3.jpg"></li>
-                                <li class="splide__slide"><img class="bannerImage" src="img/Image-4.jpg"></li>
-                                <li class="splide__slide"><img class="bannerImage" src="img/Image-5.jpg"></li>
-                                <li class="splide__slide"><img class="bannerImage" src="img/Image-6.jpg"></li>
-                                <li class="splide__slide"><img class="bannerImage" src="img/Image-7.jpg"></li>
-                                <li class="splide__slide"><img class="bannerImage" src="img/Image-8.jpg"></li>
-                                <li class="splide__slide"><img class="bannerImage" src="img/Image-9.jpg"></li>
-                                <li class="splide__slide"><img class="bannerImage" src="img/Image-10.jpg"></li>
+                                <li class="splide__slide"><img class="bannerImage" src="../img/Image-1.jpeg"></li>
+                                <li class="splide__slide"><img class="bannerImage" src="../img/Image-2.jpg"></li>
+                                <li class="splide__slide"><img class="bannerImage" src="../img/Image-3.jpg"></li>
+                                <li class="splide__slide"><img class="bannerImage" src="../img/Image-4.jpg"></li>
+                                <li class="splide__slide"><img class="bannerImage" src="../img/Image-5.jpg"></li>
+                                <li class="splide__slide"><img class="bannerImage" src="../img/Image-6.jpg"></li>
+                                <li class="splide__slide"><img class="bannerImage" src="../img/Image-7.jpg"></li>
+                                <li class="splide__slide"><img class="bannerImage" src="../img/Image-8.jpg"></li>
+                                <li class="splide__slide"><img class="bannerImage" src="../img/Image-9.jpg"></li>
+                                <li class="splide__slide"><img class="bannerImage" src="../img/Image-10.jpg"></li>
                             </ul>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/KillersOfTheFlowerMoon.jpg">
+                                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -92,7 +92,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/TMNT.jpg">
+                                                <img class="posterImage" src="../img/TMNT.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -109,7 +109,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Oppenheimer3.jpg">
+                                                <img class="posterImage" src="../img/Oppenheimer3.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -126,7 +126,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/MarioBros.jpg">
+                                                <img class="posterImage" src="../img/MarioBros.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -143,7 +143,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/JohnWick4.jpg">
+                                                <img class="posterImage" src="../img/JohnWick4.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -160,7 +160,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Babylon.jpg">
+                                                <img class="posterImage" src="../img/Babylon.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -177,7 +177,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/BeauIsAfraid.jpeg">
+                                                <img class="posterImage" src="../img/BeauIsAfraid.jpeg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -194,7 +194,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Barbie.jpg">
+                                                <img class="posterImage" src="../img/Barbie.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -211,7 +211,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Elemental.jpg">
+                                                <img class="posterImage" src="../img/Elemental.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -228,7 +228,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/SpidermanATSV.jpg">
+                                                <img class="posterImage" src="../img/SpidermanATSV.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -259,7 +259,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/KillersOfTheFlowerMoon.jpg">
+                                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -276,7 +276,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/TMNT.jpg">
+                                                <img class="posterImage" src="../img/TMNT.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -293,7 +293,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Oppenheimer3.jpg">
+                                                <img class="posterImage" src="../img/Oppenheimer3.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -310,7 +310,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/MarioBros.jpg">
+                                                <img class="posterImage" src="../img/MarioBros.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -327,7 +327,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/JohnWick4.jpg">
+                                                <img class="posterImage" src="../img/JohnWick4.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -344,7 +344,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Babylon.jpg">
+                                                <img class="posterImage" src="../img/Babylon.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -361,7 +361,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/BeauIsAfraid.jpeg">
+                                                <img class="posterImage" src="../img/BeauIsAfraid.jpeg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -378,7 +378,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Barbie.jpg">
+                                                <img class="posterImage" src="../img/Barbie.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -395,7 +395,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Elemental.jpg">
+                                                <img class="posterImage" src="../img/Elemental.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -412,7 +412,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/SpidermanATSV.jpg">
+                                                <img class="posterImage" src="../img/SpidermanATSV.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -443,7 +443,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/KillersOfTheFlowerMoon.jpg">
+                                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -460,7 +460,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/TMNT.jpg">
+                                                <img class="posterImage" src="../img/TMNT.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -477,7 +477,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Oppenheimer3.jpg">
+                                                <img class="posterImage" src="../img/Oppenheimer3.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -494,7 +494,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/MarioBros.jpg">
+                                                <img class="posterImage" src="../img/MarioBros.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -511,7 +511,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/JohnWick4.jpg">
+                                                <img class="posterImage" src="../img/JohnWick4.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -528,7 +528,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Babylon.jpg">
+                                                <img class="posterImage" src="../img/Babylon.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -545,7 +545,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/BeauIsAfraid.jpeg">
+                                                <img class="posterImage" src="../img/BeauIsAfraid.jpeg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -562,7 +562,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Barbie.jpg">
+                                                <img class="posterImage" src="../img/Barbie.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -579,7 +579,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Elemental.jpg">
+                                                <img class="posterImage" src="../img/Elemental.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -596,7 +596,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/SpidermanATSV.jpg">
+                                                <img class="posterImage" src="../img/SpidermanATSV.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -627,7 +627,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/KillersOfTheFlowerMoon.jpg">
+                                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -644,7 +644,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/TMNT.jpg">
+                                                <img class="posterImage" src="../img/TMNT.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -661,7 +661,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Oppenheimer3.jpg">
+                                                <img class="posterImage" src="../img/Oppenheimer3.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -678,7 +678,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/MarioBros.jpg">
+                                                <img class="posterImage" src="../img/MarioBros.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -695,7 +695,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/JohnWick4.jpg">
+                                                <img class="posterImage" src="../img/JohnWick4.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -712,7 +712,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Babylon.jpg">
+                                                <img class="posterImage" src="../img/Babylon.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -729,7 +729,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/BeauIsAfraid.jpeg">
+                                                <img class="posterImage" src="../img/BeauIsAfraid.jpeg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -746,7 +746,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Barbie.jpg">
+                                                <img class="posterImage" src="../img/Barbie.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -763,7 +763,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/Elemental.jpg">
+                                                <img class="posterImage" src="../img/Elemental.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -780,7 +780,7 @@
                                         <div class="posterContainer">
                                             <div class="whiteLine"></div>
                                             <div class="poster">
-                                                <img class="posterImage" src="img/SpidermanATSV.jpg">
+                                                <img class="posterImage" src="../img/SpidermanATSV.jpg">
                                                 <div class="gradient"></div>
                                             </div>
                                             <div class="posterInfo">
@@ -801,6 +801,6 @@
                 <div class="footer"></div>
             </div>
         </div>
-        <script src="splide-4.1.3/dist/js/splide.min.js"></script>
+        <script src="../splide-4.1.3/dist/js/splide.min.js"></script>
     </body>
 </html>
