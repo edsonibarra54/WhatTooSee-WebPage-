@@ -32,6 +32,36 @@ document.addEventListener('DOMContentLoaded', function() {
         list.style.flexDirection = 'column';
     });
 
+    // Escucha cambios en la altura del navbar, el margen del container y el menu
+    const navbar = document.getElementById('Menu-top');
+    const container = document.getElementById('pageContent');
+    const menu = document.getElementById('secondListDiv');
+    let h;
+
+    const observerNavbar = new ResizeObserver(entries => {
+        for (const entry of entries) {
+        const width = entry.contentRect.width;
+        h = width / 13.65;
+        navbar.style.height = h + 'px';
+        }
+    });
+
+    const observerContainer = new ResizeObserver(entries => {
+        for (const entry of entries) {
+        container.style.marginTop = h + 'px';
+        }
+    });
+
+    const observerMenu = new ResizeObserver(entries => {
+        for (const entry of entries) {
+        menu.style.marginTop = h + 'px';
+        }
+    });
+
+    observerNavbar.observe(navbar);
+    observerContainer.observe(container);
+    observerMenu.observe(menu);
+
     // Escucha cambios en la altura del banner
     const banner = document.getElementById('Banner');
 
@@ -107,5 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observa todos los elementos de la clase 'posterCarouselBase'
     for (const elemento of elementosPosterCarouselBase) {
         observerPosterCarouselBase.observe(elemento);
+    }
+
+    // Direccionar a pagina peliculas/series
+    function redireccionar() {
+        window.location.href = './movies_and_series.html';
     }
 });

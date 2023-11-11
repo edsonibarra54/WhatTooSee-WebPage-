@@ -2,15 +2,17 @@
     <head>
         <script type="text/javascript" src="js/functionality.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
-        <link rel="stylesheet" type="text/css" href="styles/styleDesktop.css" media="screen and (min-width: 1024px)">
-        <link rel="stylesheet" type="text/css" href="styles/styleTablet.css" media="screen and (max-width: 1023px) and (min-width: 768px)">
-        <link rel="stylesheet" type="text/css" href="styles/styleMobile.css" media="screen and (max-width: 767px)">
+        <link rel="stylesheet" type="text/css" href="styles/indexStyles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/indexStyles/styleDesktop.css" media="screen and (min-width: 1024px)">
+        <link rel="stylesheet" type="text/css" href="styles/indexStyles/styleTablet.css" media="screen and (max-width: 1023px) and (min-width: 768px)">
+        <link rel="stylesheet" type="text/css" href="styles/indexStyles/styleMobile.css" media="screen and (max-width: 767px)">
         <link rel="stylesheet" href="splide-4.1.3/dist/css/splide.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+        <title>What to see</title>
+        <link rel="icon" href="img/favicon.png" type="image/png">
     </head>
     <body>
         <div id="Container">
@@ -19,8 +21,7 @@
                     <div id="Logo"></div>
                     <div id="mainListDiv" class="main_list">
                         <ul class="List" id="ListMenu">
-                            <li><a href="#" class="Link">Peliculas</a></li>
-                            <li><a href="#" class="Link">Series</a></li>
+                            <li><a href="#" class="Link" onclick="redireccionar()">Peliculas/Series</a></li>
                             <li><a href="#" class="Link">Comunidad</a></li>
                             <li><a href="#" class="Link">Iniciar Sesion</a></li>
                         </ul>
@@ -33,8 +34,7 @@
                 </div>
                 <div id="secondListDiv" class="second_list">
                     <ul class="List" id="ListMenu2">
-                        <li><a href="#" class="Link">Peliculas</a></li>
-                        <li><a href="#" class="Link">Series</a></li>
+                        <li><a href="#" class="Link" onclick="redireccionar()">Peliculas/Series</a></li>
                         <li><a href="#" class="Link">Comunidad</a></li>
                         <li><a href="#" class="Link">Iniciar Sesion</a></li>
                     </ul>

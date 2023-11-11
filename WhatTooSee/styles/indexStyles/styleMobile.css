@@ -5,12 +5,12 @@ body{
 #Container{
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 #Menu{
     width: 100%;
+    display: flex;
+    justify-content: end;
 }
 
 #Menu-top{
@@ -23,21 +23,22 @@ body{
 }
 
 #Logo{
-    width: 250px;
+    width: 300px;
     height: 65%;
-    background-image: url("../img/W2SBlack.png");
+    background-image: url("../../img/W2SBlack.png");
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: 40px;
+    margin-left: 5.2%;
 }
 
 .list{
     list-style: none;
     display: flex;
-    align-items: center;
-    gap: 40px;
+    align-items: end;
+    flex-direction: column;
     white-space: nowrap;
-    padding-right: 40px;
+    margin-right: 5.2%;
+    gap: 40px;
 }
 .link{
     position: relative;
@@ -64,24 +65,54 @@ body{
     transform-origin: left;
 }
 
-  .link::after{
+.link::after{
     bottom: -3px;
     transform-origin: right;
 }
 
-  .link:hover::before,
-  .link:hover::after,
-  .active::before,
-  .active::after{
+.link:hover::before,
+.link:hover::after,
+.active::before,
+.active::after{
       transform: scaleX(1);
 }
 
-.menu-toggle{
+.main_list {
+    width: 100%;
+    height: 0;
     display: none;
 }
 
 .second_list{
+    width: 25%;
+    min-width: 150px;
+    justify-content: end;
+    position: fixed;
     display: none;
+    font-size: 2ex;
+    background-color: #e2e2e2;
+    margin-top: 75px;
+}
+
+.show-menu {
+    display: block;
+}
+
+.menu-toggle{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3%;
+    height: 30%;
+    margin-right: 5.2%;
+}
+
+.bar{
+    width: 100%;
+    height: 15%;
+    background-color: #333;
+    transition: 0.4s;
 }
 
 #Banner{
@@ -91,7 +122,7 @@ body{
 
 #pageContent{
     width: 100%;
-    height: 2000px;
+    height: 1000px;
     background-color: #e2e2e2;
     margin-top: 75px;
 }
@@ -106,22 +137,22 @@ body{
     width: 100%;
     height: 3px;
     background-color: #0d1821;
-    margin: 20px 0px 20px 0px;
+    margin: 2% 0px 2% 0px;
 }
 
 .subtitle{
     font-family: Urbanist;
-    font-size: 250%;
+    font-size: 5vw;
     font-weight: bolder;
-    margin-top: 20px;
-    padding-left: 20px;
+    margin-top: 2%;
+    padding-left: 2%;
     color: #0d1821 ;
 }
 
 .posterCarouselBase{
     width: 100%;
     height: 550px;
-    margin-top: 20px;
+    margin-top: 2%;
     background-color: #1C1C1C;
 }
 
@@ -198,20 +229,20 @@ body{
 }
 
 i{
-    font-size: 2.5vw;
+    font-size: 2vw;
     color: #e4d804;
 }
 
 .calificacion{
     font-family: Bebas Neue;
-    font-size: 3vw;
+    font-size: 2.5vw;
     padding-left: 5%;
     color: #fff;
 }
 
 .footer{
     width: 100%;
-    height: 100px;
-    margin-top: 20px;
+    height: 80px;
+    margin-top: 2%;
     background-color: #1C1C1C;
 }
