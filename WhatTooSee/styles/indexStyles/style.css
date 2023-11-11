@@ -36,6 +36,16 @@ body{
     width: 0;
 }
 
+#bannerSlider .splide__pagination__page{
+    width: 20px; /* Ajusta según sea necesario */
+    height: 20px; /* Ajusta según sea necesario */
+    margin: 5px 5px; /* Ajusta según sea necesario */
+}
+
+#bannerSlider .splide__arrow {
+    display: none !important;
+}
+
 #movieSlider .splide__pagination{
     display: none;
 }
@@ -52,11 +62,11 @@ body{
     display: none;
 }
 
-#logo{
+#bannerSlider .splide__slide{
     cursor: pointer;
 }
 
-#bannerSlider .splide__slide{
+#logo{
     cursor: pointer;
 }
 

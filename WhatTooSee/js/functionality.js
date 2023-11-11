@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const second_list = document.querySelector('.second_list');
     const list = document.getElementById('ListMenu2');
 
+    // Muestra el menu
+    menuToggle.addEventListener('click', function() {
+        second_list.classList.toggle('show-menu');
+        list.style.flexDirection = 'column';
+    });
+
     // Inicia el carrusel de banners
     var splide1 = new Splide('#bannerSlider', {
         type: 'loop',
@@ -26,11 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     splide1.mount();
-
-    menuToggle.addEventListener('click', function() {
-        second_list.classList.toggle('show-menu');
-        list.style.flexDirection = 'column';
-    });
 
     // Escucha cambios en la altura del navbar, el margen del container y el menu
     const navbar = document.getElementById('Menu-top');
