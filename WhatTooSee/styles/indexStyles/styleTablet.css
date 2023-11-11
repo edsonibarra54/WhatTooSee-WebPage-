@@ -64,16 +64,16 @@ body{
     transform-origin: left;
 }
 
-  .link::after{
+.link::after{
     bottom: -3px;
     transform-origin: right;
 }
 
-  .link:hover::before,
-  .link:hover::after,
-  .active::before,
-  .active::after{
-      transform: scaleX(1);
+.link:hover::before,
+.link:hover::after,
+.active::before,
+.active::after{
+    transform: scaleX(1);
 }
 
 .menu-toggle{

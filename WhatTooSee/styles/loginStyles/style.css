@@ -1,0 +1,6 @@
+body{
+    margin: 0px;
+    font-family: Raleway;
+    background: -webkit-radial-gradient(top left, ellipse, #e2e2e2 0%, transparent), 
+    linear-gradient(to bottom, #e2e2e2, #c9d6ff 60%, #c9d6ff, #e2e2e2);
+}

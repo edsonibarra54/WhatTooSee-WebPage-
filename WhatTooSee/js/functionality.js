@@ -145,6 +145,9 @@ function redireccionar(index) {
     if(index == 1){
         window.location.href = '../pages/movies_and_series.html';
     }
+    if(index == 1){
+        window.location.href = '../pages/community.html';
+    }
     if(index == 3){
         window.location.href = '../pages/login.html';
     }
