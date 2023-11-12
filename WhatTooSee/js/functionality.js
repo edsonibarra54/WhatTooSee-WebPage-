@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Muestra el menu
     const menuToggle = document.querySelector('.menu-toggle');
     const second_list = document.querySelector('.second_list');
     const list = document.getElementById('ListMenu2');
-
-    // Muestra el menu
+    
     menuToggle.addEventListener('click', function() {
         second_list.classList.toggle('show-menu');
         list.style.flexDirection = 'column';
@@ -41,22 +41,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const observerNavbar = new ResizeObserver(entries => {
         for (const entry of entries) {
-        const width = entry.contentRect.width;
-        h = width / 13.65;
-        navbar.style.height = h + 'px';
+            const width = entry.contentRect.width;
+            h = width / 13.65;
+            navbar.style.height = h + 'px';
         }
     });
 
     const observerContainer = new ResizeObserver(entries => {
         for (const entry of entries) {
-        container.style.marginTop = h + 'px';
+            container.style.marginTop = (h+10) + 'px';
+            menu.style.marginTop = h + 'px';
         }
     });
 
     const observerMenu = new ResizeObserver(entries => {
-        for (const entry of entries) {
-        menu.style.marginTop = h + 'px';
-        }
     });
 
     observerNavbar.observe(navbar);
@@ -141,12 +139,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Direccionar a pagina peliculas/series
+// Direccionamiento de paginas
 function redireccionar(index) {
-    if(index == 1){
-        window.location.href = '../pages/movies_and_series.html';
+    if(index == 0){
+        location.reload();
     }
     if(index == 1){
+        window.location.href = '../pages/productions.html';
+    }
+    if(index == 2){
         window.location.href = '../pages/community.html';
     }
     if(index == 3){

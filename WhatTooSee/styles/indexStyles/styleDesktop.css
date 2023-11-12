@@ -1,13 +1,12 @@
-body{
-    margin: 0px;
-}
-
 #Container{
     width: 1024px;
     height: 100%;
     display: flex;
     justify-content: center;
 }
+
+/************************************************************************************************************/
+/*Estilos para el banner*/
 
 #Menu{
     width: 1024px;
@@ -39,6 +38,7 @@ body{
     white-space: nowrap;
     padding-right: 40px;
 }
+
 .link{
     position: relative;
     display: inline-block;
@@ -69,11 +69,11 @@ body{
     transform-origin: right;
 }
 
-  .link:hover::before,
-  .link:hover::after,
-  .active::before,
-  .active::after{
-      transform: scaleX(1);
+.link:hover::before,
+.link:hover::after,
+.active::before,
+.active::after{
+    transform: scaleX(1);
 }
 
 .menu-toggle{
@@ -84,6 +84,9 @@ body{
     display: none;
 }
 
+/************************************************************************************************************/
+/*Estilos para el banner*/
+
 #Banner{
     width: 100%;
     height: 512px;
@@ -91,7 +94,6 @@ body{
 
 #pageContent{
     width: 100%;
-    height: 2000px;
     background-color: #e2e2e2;
     margin-top: 75px;
 }

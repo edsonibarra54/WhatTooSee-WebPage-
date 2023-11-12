@@ -9,3 +9,7 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
+
+function redireccionar() {
+    window.location.href = '../pages/index.html';
+}
