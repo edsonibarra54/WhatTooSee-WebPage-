@@ -59,19 +59,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const width = entry.contentRect.width;
             if (width > 768){
                 h = '75px';
+                navbar.style.height = h + 'px';
+                container.style.marginTop = h + 'px';
+                menu.style.marginTop = h + 'px';
             }
             if (width < 768){
                 h = width / 13.65;
                 navbar.style.height = h + 'px';
+                container.style.marginTop = h + 'px';
+            menu.style.marginTop = h + 'px';
             }
         }
     });
 
     const observerContainer = new ResizeObserver(entries => {
-        for (const entry of entries) {
-            container.style.marginTop = h + 'px';
-            menu.style.marginTop = h + 'px';
-        }
     });
 
     const observerMenu = new ResizeObserver(entries => {
@@ -107,5 +108,25 @@ document.addEventListener('DOMContentLoaded', function() {
     observerToggle.observe(toggle);
     observerSearchbox.observe(searchbox);
     observerFilterbox.observe(filterbox);
+
+    // Escucha cambios en la altura de los posters
+    const elementosPosterCarouselBase = document.getElementsByClassName('posterCarouselBase');
+
+    const observerPosterCarouselBase = new ResizeObserver(entries => {
+        for (const entry of entries) {
+            const width = entry.contentRect.width;
+            const height = width / 1.8618;
+            
+            // Itera sobre todos los elementos y ajusta la altura
+            for (const elemento of elementosPosterCarouselBase) {
+                elemento.style.height = height + 'px';
+            }
+        }
+    });
+
+    // Observa todos los elementos de la clase 'posterCarouselBase'
+    for (const elemento of elementosPosterCarouselBase) {
+        observerPosterCarouselBase.observe(elemento);
+    }
     
 });

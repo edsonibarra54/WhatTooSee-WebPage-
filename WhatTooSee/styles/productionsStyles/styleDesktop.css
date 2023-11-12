@@ -244,7 +244,7 @@
 
 .production{
     width: 22%;
-    height: 380px;
+    height: 10%;
     border-radius: 100px;
     margin-bottom: 20px;
 }
@@ -285,7 +285,7 @@
     height: 35%;
     margin-top: 5%;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.7vw;
     font-family: Bebas Neue;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -298,6 +298,7 @@
     height: 20%;
     display: flex;
     align-items: center;
+    margin-bottom: 5%;
 }
 
 i{
