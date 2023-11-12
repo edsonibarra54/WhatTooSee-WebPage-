@@ -7,7 +7,7 @@ function redireccionar(index) {
         window.location.href = '../pages/productions.html';
     }
     if(index == 2){
-        location.reload();
+        window.location.href = '../pages/community.html';
     }
     if(index == 3){
         window.location.href = '../pages/login.html';
@@ -49,7 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    const observerContainer = new ResizeObserver(entries => {
+    });
+
+    const observerMenu = new ResizeObserver(entries => {
+    });
+
     observerNavbar.observe(navbar);
+    observerContainer.observe(container);
+    observerMenu.observe(menu);
 
     /**********************************************************************************************************/
     // Escucha cambios en el ancho del menu
@@ -68,40 +77,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     observerMenubox.observe(lists);
-
-    /**********************************************************************************************************/
-    //Escuchar cambios la barra de busqueda
-    const searchbox = document.getElementById('box');
-    const title = document.getElementById('title-Container');
-
-    const observerTitle = new ResizeObserver(entries => {
-        for (const entry of entries) {
-            const height = entry.contentRect.height;
-            h = height / 2.4;
-            searchbox.style.height = h + 'px';
-        }
-    });
-
-    observerTitle.observe(title);
-
-    /**********************************************************************************************************/
-    // Escucha cambios en el ancho de los perfiles
-    const elementosCard = document.getElementsByClassName('card');
-
-    const observerCard = new ResizeObserver(entries => {
-        for (const entry of entries) {
-            const width = entry.contentRect.width;
-            const height = width / .92;
-            
-            // Itera sobre todos los elementos y ajusta la altura
-            for (const elemento of elementosCard) {
-                elemento.style.height = height + 'px';
-            }
-        }
-    });
-
-    // Observa todos los elementos de la clase 'card'
-    for (const elemento of elementosCard) {
-        observerCard.observe(elemento);
-    }
 });

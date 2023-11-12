@@ -15,6 +15,7 @@ function redireccionar(index) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    /**********************************************************************************************************/
     // Muestra el menu
     const menuToggle = document.querySelector('.menu-toggle');
     const second_list = document.querySelector('.second_list');
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         list.style.flexDirection = 'column';
     });
 
+    /**********************************************************************************************************/
     // Funcionalidad del boton
     var title = document.getElementById('title-Container')
     var label = document.getElementById('search-Label')
@@ -48,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         label.textContent = 'Search for series';
     });
     
+    /**********************************************************************************************************/
     // Escucha cambios en la altura del navbar, el margen del container y el menu
     const navbar = document.getElementById('Menu-top');
     const container = document.getElementById('page-Container');
@@ -82,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     observerContainer.observe(container);
     observerMenu.observe(menu);
 
+    /**********************************************************************************************************/
     //Escuchar cambios en el toggle, la barra de busqueda y los filtros
     const toggle = document.getElementById('button-box');
     const searchbox = document.getElementById('box');
@@ -109,7 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
     observerSearchbox.observe(searchbox);
     observerFilterbox.observe(filterbox);
 
-    // Escucha cambios en la altura de los posters
+    /**********************************************************************************************************/
+    // Escucha cambios en la altura de los posters (Aun no esta implementado)
     const elementosPosterCarouselBase = document.getElementsByClassName('posterCarouselBase');
 
     const observerPosterCarouselBase = new ResizeObserver(entries => {
