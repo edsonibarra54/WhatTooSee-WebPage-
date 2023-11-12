@@ -6,7 +6,7 @@
 }
 
 /************************************************************************************************************/
-/*Estilos para el banner*/
+/*Estilos para el navbar*/
 
 #Menu{
     width: 1024px;
@@ -104,8 +104,10 @@
     object-fit: cover;
 }
 
-#bannerSlider .splide__arrow {
-    display: none !important;
+#bannerSlider .splide__pagination__page{
+    width: 20px;
+    height: 20px;
+    margin: 5px 5px;
 }
 
 .line{

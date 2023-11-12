@@ -57,8 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const observerNavbar = new ResizeObserver(entries => {
         for (const entry of entries) {
             const width = entry.contentRect.width;
-            h = width / 13.65;
+            if (width > 768){
+                h = '75px';
+            }
             if (width < 768){
+                h = width / 13.65;
                 navbar.style.height = h + 'px';
             }
         }
