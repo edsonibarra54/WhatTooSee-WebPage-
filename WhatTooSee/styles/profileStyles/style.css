@@ -30,3 +30,7 @@ body{
 #logo{
     cursor: pointer;
 }
+
+#page-Container{
+    width: 100%;
+}

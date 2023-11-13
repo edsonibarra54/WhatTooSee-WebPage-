@@ -3,6 +3,24 @@
     scrollbar-color: #e2e2e2;
 }
 
+#edit{
+    width: 10%;
+    height: 4%;
+    border-radius: 2vw;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #FFA500;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-size: 3.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #Container{
     width: 100%;
     height: 100%;
@@ -86,4 +104,143 @@
 
 .second_list{
     display: none;
+}
+
+/************************************************************************************************************/
+/*Estilos para el perfil*/
+
+#profile-Container{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #1c1c1c;
+}
+
+#profile-Image{
+    width: 30%;
+    height: 50%;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+#name-Container{
+    width: 65%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+#title{
+    width: 100%;
+    height: 100%;
+    font-size: 7.7vw;
+    font-family: Bebas Neue;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#name-Container .line{
+    width: 100%;
+    height: 5%;
+    background-color: #fff;
+    margin: 1.5% 0px;
+}
+
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: #0d1821;
+    margin: 20px 0px 20px 0px;
+}
+
+/************************************************************************************************************/
+/*Estilos para la seccion de comentarios*/
+
+#subtitle{
+    font-family: Urbanist;
+    font-size: 6.2vw;
+    font-weight: bolder;
+    padding-left: 20px;
+    color: #0d1821 ;
+    margin-bottom: 20px;
+}
+
+#commentaries-Container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment-Container{
+    width: 85%;
+    height: 200px;
+    border-radius: 3vw;
+    background-color: #1c1c1c;
+    padding: 2% 4%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment-Info{
+    width: 18%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.poster-Container{
+    width: 60%;
+    height: 75%;
+    border: 2px solid #e2e2e2;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.posterImage{
+    width: 100%;
+    object-fit: cover;
+}
+
+.text{
+    width: 65%;
+    height: 75%;
+    border: .3vw solid #e2e2e2;
+    color: #fff;
+    border-radius: 20px;
+    padding: 2% 4%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.55vw;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.cal-Container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.cal-Container .fa-star {
+    color: gold;
+    font-size: 1.6vw;
 }

@@ -104,4 +104,17 @@ document.addEventListener('DOMContentLoaded', function() {
     for (const elemento of elementosCard) {
         observerCard.observe(elemento);
     }
+
+    /**********************************************************************************************************/
+    // Redirecciona a la pagina a cierto perfil
+
+    // Obtén todos los elementos con la clase 'production'
+    const enlaceDivs = document.querySelectorAll('.card');
+
+    // Agrega un manejador de eventos a cada div
+    enlaceDivs.forEach((div, index) => {    
+        div.addEventListener('click', function() {
+            window.location.href = '../pages/profile.html';
+        });
+    });
 });

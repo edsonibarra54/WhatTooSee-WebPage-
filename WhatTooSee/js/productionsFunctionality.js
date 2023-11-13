@@ -134,7 +134,10 @@ document.addEventListener('DOMContentLoaded', function() {
         observerPosterCarouselBase.observe(elemento);
     }
 
-    // Obtén todos los elementos con la clase 'enlace-div'
+    /**********************************************************************************************************/
+    // Redirecciona a la pagina de cierta pelicula
+
+    // Obtén todos los elementos con la clase 'production'
     const enlaceDivs = document.querySelectorAll('.production');
 
     // Agrega un manejador de eventos a cada div

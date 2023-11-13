@@ -36,29 +36,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const observerNavbar = new ResizeObserver(entries => {
         for (const entry of entries) {
             const width = entry.contentRect.width;
-            if (width > 768){
-                h = '75px';
-                navbar.style.height = h + 'px';
-                container.style.marginTop = h + 'px';
-            }
-            if (width < 768){
-                h = width / 13.65;
-                navbar.style.height = h + 'px';
-                container.style.marginTop = h + 'px';
-                menu.style.marginTop = h + 'px';
-            }
+            h = width / 13.65;
+            navbar.style.height = h + 'px';
+            container.style.marginTop = h + 'px';
+            menu.style.marginTop = h + 'px';
         }
     });
 
-    const observerContainer = new ResizeObserver(entries => {
-    });
-
-    const observerMenu = new ResizeObserver(entries => {
-    });
-
     observerNavbar.observe(navbar);
-    observerContainer.observe(container);
-    observerMenu.observe(menu);
+    
+    /**********************************************************************************************************/
+    // Escucha cambios en el ancho del contenedor del perfil
+    const profileContainer = document.getElementById('profile-Container');
+    const edit = document.getElementById('edit');
+
+    const observerProfilecontainer = new ResizeObserver(entries => {
+        for (const entry of entries) {
+            const width = entry.contentRect.width;
+            h = width / 1.7;
+            profileContainer.style.height = h + 'px';
+            h = width / 17.8;
+            edit.style.height = h + 'px';
+        }
+    });
+    observerProfilecontainer.observe(profileContainer);
 
     /**********************************************************************************************************/
     // Escucha cambios en el ancho del menu
@@ -77,4 +78,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     observerMenubox.observe(lists);
+
+    /**********************************************************************************************************/
+    // Escucha cambios en el ancho de los comentarios
+    const commentaries = document.getElementsByClassName('comment-Container');
+
+    const observerCommentaries = new ResizeObserver(entries => {
+        for (const entry of entries) {
+            const width = entry.contentRect.width;
+            const height = width / 3.95;
+            
+            for (const elemento of commentaries) {
+                elemento.style.height = height + 'px';
+            }
+        }
+    });
+
+    // Observa todos los elementos de la clase 'comment-Container'
+    for (const elemento of commentaries) {
+        observerCommentaries.observe(elemento);
+    }
 });

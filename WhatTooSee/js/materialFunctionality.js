@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const width = entry.contentRect.width;
             h = width / 13.65;
             navbar.style.height = h + 'px';
-            container.style.marginTop = (h+10) + 'px';
+            container.style.marginTop = h + 'px';
             menu.style.marginTop = h + 'px';
         }
     });
