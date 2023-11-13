@@ -1,0 +1,36 @@
+body{
+    margin: 0px;
+    font-family: Raleway;
+    display: flex;
+    justify-content: center;
+    background-color: #e2e2e2;
+}
+
+::-webkit-scrollbar {
+    width: 8px; /* Cambia el ancho de la barra de desplazamiento en navegadores webkit (como Chrome y Safari) */
+    scrollbar-color: #e2e2e2;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaaaaa; /* Cambia el color del pulgar de la barra de desplazamiento en navegadores webkit */
+    border-radius: 6px; /* Cambia el radio de las esquinas del pulgar en navegadores webkit */
+}
+
+::-webkit-scrollbar-track{
+    background-color: #e2e2e2;
+}
+
+#Menu{
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+#logo{
+    cursor: pointer;
+}
+
+#page-Container{
+    width: 100%;
+}

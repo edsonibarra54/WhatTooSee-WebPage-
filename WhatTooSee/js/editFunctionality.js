@@ -14,11 +14,6 @@ function redireccionar(index) {
     }
 }
 
-// Direccionar a pagina de edicion
-function editPages() {
-    window.location.href = '../pages/edit.html';
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     /**********************************************************************************************************/
     // Muestra el menu
@@ -49,22 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     observerNavbar.observe(navbar);
-    
-    /**********************************************************************************************************/
-    // Escucha cambios en el ancho del contenedor del perfil
-    const profileContainer = document.getElementById('profile-Container');
-    const edit = document.getElementById('edit');
-
-    const observerProfilecontainer = new ResizeObserver(entries => {
-        for (const entry of entries) {
-            const width = entry.contentRect.width;
-            h = width / 1.7;
-            profileContainer.style.height = h + 'px';
-            h = width / 17.8;
-            edit.style.height = h + 'px';
-        }
-    });
-    observerProfilecontainer.observe(profileContainer);
 
     /**********************************************************************************************************/
     // Escucha cambios en el ancho del menu
