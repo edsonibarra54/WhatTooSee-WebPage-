@@ -36,29 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const observerNavbar = new ResizeObserver(entries => {
         for (const entry of entries) {
             const width = entry.contentRect.width;
-            if (width > 768){
-                h = '75px';
-                navbar.style.height = h + 'px';
-                container.style.marginTop = h + 'px';
-            }
-            if (width < 768){
-                h = width / 13.65;
-                navbar.style.height = h + 'px';
-                container.style.marginTop = h + 'px';
-                menu.style.marginTop = h + 'px';
-            }
+            h = width / 13.65;
+            navbar.style.height = h + 'px';
+            container.style.marginTop = (h+10) + 'px';
+            menu.style.marginTop = h + 'px';
         }
     });
 
-    const observerContainer = new ResizeObserver(entries => {
-    });
-
-    const observerMenu = new ResizeObserver(entries => {
-    });
-
     observerNavbar.observe(navbar);
-    observerContainer.observe(container);
-    observerMenu.observe(menu);
 
     /**********************************************************************************************************/
     // Escucha cambios en el ancho del menu
@@ -77,4 +62,57 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     observerMenubox.observe(lists);
+
+    const posterContainer = document.getElementById('poster-Container');
+
+    const observerPostercontainer = new ResizeObserver(entries => {
+        for (const entry of entries) {
+            const width = entry.contentRect.width;
+            h = width / 1.528;
+            posterContainer.style.height = h + 'px';
+        }
+    });
+    observerPostercontainer.observe(posterContainer);
+
+    /**********************************************************************************************************/
+    // Escucha cambios en el ancho de los comentarios
+    const commentaries = document.getElementsByClassName('comment-Container');
+
+    const observerCommentaries = new ResizeObserver(entries => {
+        for (const entry of entries) {
+            const width = entry.contentRect.width;
+            const height = width / 3.95;
+            
+            for (const elemento of commentaries) {
+                elemento.style.height = height + 'px';
+            }
+        }
+    });
+
+    // Observa todos los elementos de la clase 'comment-Container'
+    for (const elemento of commentaries) {
+        observerCommentaries.observe(elemento);
+    }
+
+    
 });
+
+/**********************************************************************************************************/
+    // Escucha las selecciones en las estrellas de un comentario
+    function selectStar(clickedStar) {
+        // Obtener todos los íconos dentro del contenedor
+        var stars = document.getElementById("cal-Stars").getElementsByTagName("i");
+    
+        // Obtener el índice del ícono clicado
+        var clickedIndex = Array.from(stars).indexOf(clickedStar);
+    
+        // Iterar sobre los íconos y aplicar estilos según el índice
+        for (var i = 0; i <= clickedIndex; i++) {
+            stars[i].style.color = "#FFA500";
+        }
+    
+        // Restablecer el color de los íconos a la izquierda del clicado
+        for (var j = clickedIndex + 1; j < stars.length; j++) {
+            stars[j].style.color = "";
+        }
+    }

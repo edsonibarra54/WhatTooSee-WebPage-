@@ -80,3 +80,227 @@
 .second_list{
     display: none;
 }
+
+/************************************************************************************************************/
+/*Estilos para el poster*/
+
+#poster-Container{
+    width: 100%;
+    height: 670px;
+    background-color: #1c1c1c;
+    display: flex;
+}
+
+#poster{
+    width: 50%;
+    height: 100%;
+    background-color: #e2e2e2;
+}
+
+#poster-Image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#name-Container{
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    padding: 2% 3%;
+}
+
+#title{
+    width: 100%;
+    height: 25%;
+    font-size: 5rem;
+    font-family: Bebas Neue;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+#cali-Container{
+    display: flex;
+    margin-top: 4%;
+}
+
+#star{
+    font-size: 3rem;
+    color: #e4d804;
+}
+
+#calificacion{
+    font-family: Bebas Neue;
+    font-size: 3rem;
+    padding-left: 5%;
+    color: #fff;
+}
+
+.text-Container{
+    display: flex;
+    margin: 3% 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.5rem;
+}
+
+.charact{
+    padding-right: 2%;
+}
+
+.info{
+    overflow: hidden;
+}
+
+#name-Container .line{
+    width: 100%;
+    height: .3%;
+    background-color: #fff;
+    margin: 1.5% 0px;
+}
+
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: #0d1821;
+    margin: 20px 0px 20px 0px;
+}
+
+/************************************************************************************************************/
+/*Estilos para la seccion de comentarios*/
+
+#subtitle{
+    font-family: Urbanist;
+    font-size: 4rem;
+    font-weight: bolder;
+    padding-left: 20px;
+    color: #0d1821 ;
+    margin-bottom: 20px;
+}
+
+#commentaries-Container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment-Container{
+    width: 85%;
+    height: 200px;
+    border-radius: 35px;
+    background-color: #1c1c1c;
+    padding: 2% 4%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-Container{
+    width: 20%;
+    height: 90%;
+    border: 2px solid #e2e2e2;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text{
+    width: 65%;
+    height: 75%;
+    border: 2px solid #e2e2e2;
+    color: #fff;
+    border-radius: 20px;
+    padding: 2% 4%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.profile-Image {
+    width: 40%;
+    height: 35%;
+    background: #e8e8e8;
+    border-radius: 100%;
+    margin: 7.5%;
+}
+
+.profile-Name {
+    width: 80%;
+    height: 23%;
+    color: #fff;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cal-Container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.cal-Container .fa-star {
+    color: gold;
+    cursor: pointer;
+}
+
+#addComment{
+    display: flex;
+    flex-direction: column;   
+    padding-left: 4%;
+}
+
+#label{
+    margin-bottom: 1%;
+}
+
+#addComment .text{
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+#text-Comment{
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+    overflow-wrap: break-word;
+}
+
+#text-Comment:focus {
+    outline: none;
+}
+
+#cal-Selector{
+    display: flex;
+    justify-content: space-between;
+}
+
+#cal-Selector #cal-Stars{
+    width: 20%;
+}
+
+#cal-Stars i{
+    color: #1c1c1c;
+    font-size: 1.6rem;
+}
+
+#submit{
+    width: 8%;
+    height: 100%;
+    margin-right: 8%;
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}

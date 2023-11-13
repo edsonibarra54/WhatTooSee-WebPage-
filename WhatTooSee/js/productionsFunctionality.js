@@ -133,5 +133,15 @@ document.addEventListener('DOMContentLoaded', function() {
     for (const elemento of elementosPosterCarouselBase) {
         observerPosterCarouselBase.observe(elemento);
     }
+
+    // Obtén todos los elementos con la clase 'enlace-div'
+    const enlaceDivs = document.querySelectorAll('.production');
+
+    // Agrega un manejador de eventos a cada div
+    enlaceDivs.forEach((div, index) => {    
+        div.addEventListener('click', function() {
+            window.location.href = '../pages/material.html';
+        });
+    });
     
 });
