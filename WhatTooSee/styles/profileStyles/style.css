@@ -63,3 +63,7 @@ body{
     color: #fff;
     font-family: Raleway;
 }
+
+.poster-Container{
+    cursor: pointer;
+}

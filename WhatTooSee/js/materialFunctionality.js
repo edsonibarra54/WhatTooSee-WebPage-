@@ -14,6 +14,10 @@ function redireccionar(index) {
     }
 }
 
+function profile() {
+    window.location.href = '../pages/profile.html';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     /**********************************************************************************************************/
     // Muestra el menu

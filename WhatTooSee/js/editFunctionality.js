@@ -102,4 +102,24 @@ document.addEventListener('DOMContentLoaded', function() {
     for (const elemento of buttons) {
         observerButtons.observe(elemento);
     }
+
+    /**********************************************************************************************************/
+    // Escucha cambios en los checkbox
+    const checkbox = document.getElementsByClassName('checkbox');
+
+    const observerCheckboxs = new ResizeObserver(entries => {
+        for (const entry of entries) {
+            const width = entry.contentRect.width;
+            const height = width / 37.85;
+            
+            for (const elemento of checkbox) {
+                elemento.style.height = height + 'px';
+            }
+        }
+    });
+
+    // Observa todos los elementos de la clase 'comment-Container'
+    for (const elemento of checkbox) {
+        observerCheckboxs.observe(elemento);
+    }
 });

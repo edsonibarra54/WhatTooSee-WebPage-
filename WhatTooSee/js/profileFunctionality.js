@@ -17,6 +17,10 @@ function redireccionar(index) {
     }
 }
 
+function production() {
+    window.location.href = '../pages/material.html';
+}
+
 // Direccionar a pagina de edicion
 function editPages() {
     window.location.href = '../pages/edit.html';
