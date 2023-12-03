@@ -34,3 +34,11 @@ body{
 #page-Container{
     width: 100%;
 }
+
+#id-Material{
+    position: absolute;
+    background-color: #1c1c1c;
+    color: #e2e2e2;
+    margin: .5%;
+    font-size: 2vw;
+}

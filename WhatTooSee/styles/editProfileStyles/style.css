@@ -34,32 +34,3 @@ body{
 #page-Container{
     width: 100%;
 }
-
-#corazon {
-    cursor: pointer;
-    margin: -5% 0% -10% 90%;
-}
-  
-.corazon-vacio i::before {
-    color: #e2e2e2;
-    
-}
-  
-.corazon-lleno i::before {
-    content: "\f004"; /* Código Unicode para el corazón lleno en FontAwesome */
-    color: #ffd700;
-}
-
-#follow{
-    display: flex;
-    color: #fff;
-    margin-top: -5%;
-    margin-bottom: -2%;
-}
-
-#editProfile{
-    cursor: pointer;
-    background-color: #1c1c1c;
-    color: #fff;
-    font-family: Raleway;
-}

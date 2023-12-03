@@ -13,3 +13,19 @@ loginBtn.addEventListener('click', () => {
 function redireccionar() {
     window.location.href = '../pages/index.html';
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+/**********************************************************************************************************/
+    // Escucha cambios en el ancho del menu
+    const logo = document.getElementById('logo');
+    let h;
+
+    const observerLogo = new ResizeObserver(entries => {
+        for (const entry of entries) {
+            const width = entry.contentRect.width;
+            h = width / 3.85;
+            logo.style.height = h + 'px';
+        }
+    });
+    observerLogo.observe(logo);
+});

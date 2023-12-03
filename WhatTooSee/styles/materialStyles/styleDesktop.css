@@ -304,3 +304,11 @@
     display: flex;
     justify-content: center;
 }
+
+#id-Material{
+    position: absolute;
+    background-color: #1c1c1c;
+    color: #e2e2e2;
+    margin: 4px;
+    font-size: 1.3em;
+}

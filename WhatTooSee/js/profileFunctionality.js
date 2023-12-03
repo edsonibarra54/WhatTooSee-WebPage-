@@ -12,6 +12,9 @@ function redireccionar(index) {
     if(index == 3){
         window.location.href = '../pages/login.html';
     }
+    if(index == 4){
+        window.location.href = '../pages/editProfile.html';
+    }
 }
 
 // Direccionar a pagina de edicion
@@ -82,7 +85,22 @@ document.addEventListener('DOMContentLoaded', function() {
             lists.style.marginBottom = h + 'px';
         }
     });
+    
     observerMenubox.observe(lists);
+
+    /**********************************************************************************************************/
+    // Escucha cambios en el ancho del boton de edicion de perfil
+    const button = document.getElementById('editProfile');
+
+    const observerButton = new ResizeObserver(entries => {
+        for (const entry of entries) {
+            const width = entry.contentRect.width;
+            h = width / 3;
+            button.style.height = h + 'px';
+        }
+    });
+    
+    observerButton.observe(button);
 
     /**********************************************************************************************************/
     // Escucha cambios en el ancho de los comentarios
@@ -103,4 +121,17 @@ document.addEventListener('DOMContentLoaded', function() {
     for (const elemento of commentaries) {
         observerCommentaries.observe(elemento);
     }
+
+    document.getElementById("corazon").addEventListener("click", function() {
+        var corazon = document.getElementById("corazon");
+      
+        // Cambiar clases para cambiar la apariencia del corazón
+        if (corazon.classList.contains("corazon-vacio")) {
+          corazon.classList.remove("corazon-vacio");
+          corazon.classList.add("corazon-lleno");
+        } else {
+          corazon.classList.remove("corazon-lleno");
+          corazon.classList.add("corazon-vacio");
+        }
+      });
 });

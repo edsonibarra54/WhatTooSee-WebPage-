@@ -242,3 +242,28 @@
     color: gold;
     font-size: 1.2rem;
 }
+
+#corazon{
+    font-size: 3em;
+}
+
+#follow{
+    gap: 10px;
+    font-size: 1.5em;
+}
+
+#editProfile{
+    width: 120px;
+    height: 40px;
+    font-size: 1em;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+#aboutMe{
+    font-family: Urbanist;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    color: #0d1821 ;
+    margin-bottom: 20px;
+}
