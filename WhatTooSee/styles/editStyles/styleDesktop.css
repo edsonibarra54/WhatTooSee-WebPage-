@@ -140,6 +140,7 @@
 input{
     width: 50%;
     margin-bottom: 10px;
+    font-size: .9rem;
 }
 
 button{
@@ -156,6 +157,11 @@ button{
 }
 
 .text{
+    font-size: .9rem;
+}
+
+select{
+    margin-bottom: 10px;
     font-size: .9rem;
 }
 

@@ -141,7 +141,8 @@
 
 input{
     width: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 1%;
+    font-size: 1.5vw;
 }
 
 button{
@@ -158,6 +159,11 @@ button{
 }
 
 .text{
+    font-size: 1.5vw;
+}
+
+select{
+    margin-bottom: 10px;
     font-size: 1.5vw;
 }
 

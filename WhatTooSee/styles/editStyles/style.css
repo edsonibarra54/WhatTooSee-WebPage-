@@ -34,3 +34,7 @@ body{
 #page-Container{
     width: 100%;
 }
+
+select{
+    margin-bottom: 10px;
+}
