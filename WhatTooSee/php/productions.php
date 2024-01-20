@@ -1,0 +1,262 @@
+<?php
+
+session_start();
+
+if (isset($_SESSION['user_email']) && isset($_SESSION['user_password']) && isset($_SESSION['user_admin'])) {
+    $user_email = $_SESSION['user_email'];
+    $user_password = $_SESSION['user_password'];
+    $user_id = $_SESSION['user_id'];
+    $user_admin = $_SESSION['user_admin'];
+
+    $sesionIniciada = true;
+    #echo "Las variables son '$user_email' - '$user_password' - '$user_admin'";
+}
+else{
+    $sesionIniciada = false;
+    #echo "Las variables de sesión no se han establecido.";
+}
+
+?>
+<html>
+    <head>
+        <script type="text/javascript" src="../js/productionsfunctionality.js"></script>
+        <link rel="stylesheet" type="text/css" href="../styles/productionsStyles/style.css">
+        <link rel="stylesheet" type="text/css" href="../styles/productionsStyles/styleDesktop.css" media="screen and (min-width: 1024px)">
+        <link rel="stylesheet" type="text/css" href="../styles/productionsStyles/styleTablet.css" media="screen and (max-width: 1023px) and (min-width: 768px)">
+        <link rel="stylesheet" type="text/css" href="../styles/productionsStyles/styleMobile.css" media="screen and (max-width: 767px)">
+        <link rel="stylesheet" href="../splide-4.1.3/dist/css/splide.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+        <title>What to see</title>
+        <link rel="icon" href="../img/favicon.png" type="image/png">
+    </head>
+    <body>
+        <div id="container">
+        <div id="Menu">
+                <div id="Menu-top">
+                    <div id="Logo" onclick="redireccionar(0)"></div>
+                    <div id="mainListDiv" class="main_list">
+                        <ul class="List" id="ListMenu">
+                            <li><a href="#" class="Link" onclick="redireccionar(1)">Movies/Series</a></li>
+                            <li><a href="#" class="Link" onclick="redireccionar(2)">Community</a></li>
+                            <?php
+                                if ($sesionIniciada) {
+                                    echo '<li><a href="#" class="Link" onclick="goProfile()">My profile</a></li>';
+                                    echo '<li><a href="#" class="Link" onclick="cerrarSesion()">Log out</a></li>';
+                                }
+                                else{
+                                    echo '<li><a href="#" class="Link" onclick="redireccionar(3)">Log in</a></li>';
+                                }
+                            ?>
+                        </ul>
+                    </div>
+                    <div class="menu-toggle">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <div id="secondListDiv" class="second_list">
+                    <ul class="List" id="ListMenu2">
+                        <li><a href="#" class="Link" onclick="redireccionar(1)">Movies/Series</a></li>
+                        <li><a href="#" class="Link" onclick="redireccionar(2)">Community</a></li>
+                        <?php
+                            if ($sesionIniciada) {
+                                echo '<li><a href="#" class="Link" onclick="goProfile()">My profile</a></li>';
+                                echo '<li><a href="#" class="Link" onclick="redireccionar(5)">Log out</a></li>';
+                            }
+                            else{
+                                echo '<li><a href="#" class="Link" onclick="redireccionar(3)">Log in</a></li>';
+                            }
+                        ?>
+                    </ul>
+                </div>
+            </div>
+            <div id="page-Container">
+                <div id="title-Container">Movies</div>
+                <div id="toggle">
+                    <div class="form-box">
+                        <div id="button-box">
+                            <div id="btn"></div>
+                            <div class="btn-Content">
+                                <button type="button" class="toggle-btn" id="btn-Left">Movies</button>
+                                <button type="button" class="toggle-btn" id="btn-Right">Series</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="search-Label">Search for movies</div>
+                <div id="search-Container">
+                    <div class="searchBox">
+                        <div class="box" id="box">
+                            <input type="text" placeholder="Search...">
+                            <a><i class="fas fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div id="filters-Container">
+                        <div class="filter">All</div>
+                        <div class="filter">Action</div>
+                        <div class="filter">Comedy</div>
+                        <div class="filter">Romantic</div>
+                        <div class="filter">Horror</div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div id="productions-Container">
+                    <div class="production">
+                        <div class="posterContainer">
+                            <div class="poster">
+                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
+                                <div class="gradient"></div>
+                            </div>
+                            <div class="posterInfo">
+                                <div class="posterTitle">Killers of the flower moon</div>
+                                <div class="posterCali">
+                                    <i class="fas fa-star"></i>
+                                    <div class="calificacion">10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production">
+                        <div class="posterContainer">
+                            <div class="poster">
+                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
+                                <div class="gradient"></div>
+                            </div>
+                            <div class="posterInfo">
+                                <div class="posterTitle">Killers of the flower moon</div>
+                                <div class="posterCali">
+                                    <i class="fas fa-star"></i>
+                                    <div class="calificacion">10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production">
+                        <div class="posterContainer">
+                            <div class="poster">
+                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
+                                <div class="gradient"></div>
+                            </div>
+                            <div class="posterInfo">
+                                <div class="posterTitle">Killers of the flower moon</div>
+                                <div class="posterCali">
+                                    <i class="fas fa-star"></i>
+                                    <div class="calificacion">10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production">
+                        <div class="posterContainer">
+                            <div class="poster">
+                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
+                                <div class="gradient"></div>
+                            </div>
+                            <div class="posterInfo">
+                                <div class="posterTitle">Killers of the flower moon</div>
+                                <div class="posterCali">
+                                    <i class="fas fa-star"></i>
+                                    <div class="calificacion">10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production">
+                        <div class="posterContainer">
+                            <div class="poster">
+                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
+                                <div class="gradient"></div>
+                            </div>
+                            <div class="posterInfo">
+                                <div class="posterTitle">Killers of the flower moon</div>
+                                <div class="posterCali">
+                                    <i class="fas fa-star"></i>
+                                    <div class="calificacion">10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production">
+                        <div class="posterContainer">
+                            <div class="poster">
+                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
+                                <div class="gradient"></div>
+                            </div>
+                            <div class="posterInfo">
+                                <div class="posterTitle">Killers of the flower moon</div>
+                                <div class="posterCali">
+                                    <i class="fas fa-star"></i>
+                                    <div class="calificacion">10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production">
+                        <div class="posterContainer">
+                            <div class="poster">
+                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
+                                <div class="gradient"></div>
+                            </div>
+                            <div class="posterInfo">
+                                <div class="posterTitle">Killers of the flower moon</div>
+                                <div class="posterCali">
+                                    <i class="fas fa-star"></i>
+                                    <div class="calificacion">10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production">
+                        <div class="posterContainer">
+                            <div class="poster">
+                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
+                                <div class="gradient"></div>
+                            </div>
+                            <div class="posterInfo">
+                                <div class="posterTitle">Killers of the flower moon</div>
+                                <div class="posterCali">
+                                    <i class="fas fa-star"></i>
+                                    <div class="calificacion">10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production">
+                        <div class="posterContainer">
+                            <div class="poster">
+                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
+                                <div class="gradient"></div>
+                            </div>
+                            <div class="posterInfo">
+                                <div class="posterTitle">Killers of the flower moon</div>
+                                <div class="posterCali">
+                                    <i class="fas fa-star"></i>
+                                    <div class="calificacion">10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production">
+                        <div class="posterContainer">
+                            <div class="poster">
+                                <img class="posterImage" src="../img/KillersOfTheFlowerMoon.jpg">
+                                <div class="gradient"></div>
+                            </div>
+                            <div class="posterInfo">
+                                <div class="posterTitle">Killers of the flower moon</div>
+                                <div class="posterCali">
+                                    <i class="fas fa-star"></i>
+                                    <div class="calificacion">10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

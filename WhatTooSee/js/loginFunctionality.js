@@ -11,7 +11,7 @@ loginBtn.addEventListener('click', () => {
 });
 
 function redireccionar() {
-    window.location.href = '../pages/index.html';
+    window.location.href = '../php/index.php';
 }
 
 document.addEventListener('DOMContentLoaded', function() {

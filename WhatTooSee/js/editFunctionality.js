@@ -1,17 +1,37 @@
-// Direccionar a pagina peliculas/series
+// Direccionamiento de paginas
 function redireccionar(index) {
     if(index == 0){
-        window.location.href = '../pages/index.html';
+        window.location.href = '../php/index.php';
     }
     if(index == 1){
-        window.location.href = '../pages/productions.html';
+        window.location.href = '../php/productions.php';
     }
     if(index == 2){
-        window.location.href = '../pages/community.html';
+        window.location.href = '../php/community.php';
     }
     if(index == 3){
-        window.location.href = '../pages/login.html';
+        window.location.href = '../php/login.php';
     }
+}
+
+// Direccionar a pagina de perfil
+function goProfile(){
+    window.location.href = '../php/profile.php';
+}
+
+// Funcion para cerrar sesion
+function cerrarSesion() {
+    fetch('cerrar_sesion.php', {
+        method: 'POST',
+    })
+    .then(response => {
+        if (response.ok) {
+            window.location.href = 'index.php';
+        } else {
+            console.error('Error al cerrar sesión');
+        }
+    })
+    .catch(error => console.error('Error en la solicitud:', error));
 }
 
 document.addEventListener('DOMContentLoaded', function() {

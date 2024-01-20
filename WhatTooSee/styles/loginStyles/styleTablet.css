@@ -198,3 +198,8 @@
 .container.active .toggle-Right{
     transform: translateX(200%);
 }
+
+.message{
+    color: red;
+    font-size: 1.5vw;
+}
